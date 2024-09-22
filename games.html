@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Website in progress...">
+  <meta name="keywords" content="remym, impact, rmimpact, rm, impactfn, rmimpactfn, RMIMPACT, RmImpact">
+  <link rel="icon" href="rm_custom_icon.png" type="image/png">
+  <title>Games</title>
+  <meta property="og:title" content="Rm Impact" />
+  <meta property="og:description" content="Wesite in progress..." />
+  <meta property="og:image" content="rm_custom_icon.png" />
+  <meta property="og:url" content="rmimpactt.com" />
+  <html lang="en">
+  <link href="hamburger.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload="fadeIn()">
+  <div class="top_fade">
+    <img src="white_nav_icon.png" class="top-right-logo">  
+  </div>
+  <div id="mySidenav" class="sidenav">
+    <a href="home.html">Home</a>
+    <a href="youtube.html">YouTube</a>
+    <a href="playlists.html">Playlists</a>
+    <a href="about.html">About</a>
+  </div>
+  <div style="position: fixed; z-index: 4;">
+    <div class="name"></div>
+    <div class="hamburger hamburger--minus js-hamburger">
+      <div class="hamburger-box">
+        <div class="hamburger-inner"></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Look for .hamburger
+    var hamburger = document.querySelector(".hamburger");
+    var isOpen = false; // Track the state of the menu
+
+    // On click
+    hamburger.addEventListener("click", function () {
+      // Toggle class "is-active"
+      hamburger.classList.toggle("is-active");
+
+      // Check if the menu is currently open or closed
+      if (isOpen) {
+        closeNav();
+      } else {
+        openNav();
+      }
+
+      // Toggle the state
+      isOpen = !isOpen;
+    });
+
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
+    }
+    function fadeIn() {
+            document.getElementById("main").style.opacity = "1";
+            document.getElementById("main").style.marginTop = "0px";
+
+        }
+  </script>
+
+  <div id="main">
+    <div id="fadeIn">
+     
+      <div class="spacer"></div>
+      <h2 style="font-size: 2rem;">Contact</h2>
+      <p style="font-size: 1 rem;">Click on the element below to open the side navigation menu, and push this content to
+        the right. ck on the element below to open the side navigation menu, and push this content tck on the element below to open the side navigation menu, and push this content tck on the element below to open the side navigation menu, and push this content tck on the element below to open the side navigation menu, and push this content tck on the element below to open the side navigation menu, and push this content tck on the element below to open the side navigation menu, and push this content tck on the element below to open the side navigation menu, and push this content tck on the element below to open the side navigation menu, and push this content tck on the element below to open the side navigation menu, and push this content tck on the element below to open the side navigation menu, and push this content t</p>
+    </div>
+  </div>
+</body>
+
+</html>
