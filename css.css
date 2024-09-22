@@ -1,0 +1,365 @@
+@charset "utf-8";
+
+.bg_custom {
+  background: radial-gradient(circle at 50% 210%, #784d03, #02031c); 
+  /* Use!!!! https://learnui.design/tools/gradient-generator.html */
+color: white;
+height: 100vh;
+width: 100vw;
+position: fixed;
+margin-left: -4vw;
+z-index: -1;
+
+}
+.heading_me{
+  font-size: 100rem;
+}
+.body_text {
+  font-size: 10rem;
+}
+nav {
+    /*background-color: black;*/
+    text-align: right;
+}
+.main_header {
+    font-family: arial; 
+    font-size: 3.4rem; 
+    margin-top: 20vh;
+    z-index: 999;
+    color: white;
+    position: relative;
+
+}
+
+.main_header2{
+    font-family: arial; 
+    font-size: 3.4rem; 
+    margin-top: 20vh;
+    z-index: 999;
+    color: white;
+    position: fixed;
+
+}
+
+body {
+    color: white;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    padding-top: 0vh;
+    padding-bottom: 4vh;
+    opacity: 1;
+    /* to animate*/
+     
+}
+
+@keyframes totheright {
+    0% {left: 2vw;}
+    50% {left:85.5vw;}
+    100% {left: 2vw}
+}
+.floating_div {
+    background-color: goldenrod;
+    height: 13.5vh;
+    width: 13.5vh;
+    filter: blur(10px);
+    opacity: 49%;
+    border-radius: 999px;
+    position: fixed;
+    animation: totheright 6s infinite ease-in-out;
+    top: 5vh;
+    
+}
+@keyframes dots {
+
+}
+
+.loader {
+width: 100vw;
+height: 30px;
+--c:#ffffff 50%,#ff000000 0;
+background: 
+linear-gradient(90deg ,var(--c)) 0 0%,
+linear-gradient(-90deg,var(--c)) 0 50%,
+linear-gradient(90deg ,var(--c)) 0 100%;
+background-size: 20px calc(100%/3);
+background-repeat: repeat-x;
+animation: l8 .5s infinite linear;
+position: fixed;
+top: 80vh;
+left: 0;
+}
+@keyframes l8 {
+100% {background-position: -20px 0%,-20px 50%,-20px 100%}
+}
+.floating_logo {
+    height: 13vh;
+    width: 13vh;
+    opacity: 70%;
+    border-radius: 999px;
+    position: fixed;
+    animation: totheright 6s infinite ease-in-out;
+    top: 5vh;
+    
+}
+
+/*---------------------- Navigation -----------*/
+.Title {
+	color:#003168;
+	font-family: Arial;
+	text-align: center;
+	background-color: #FFF;
+	padding-top: 100vh;
+	padding-bottom: 15px;
+	font-size: 110%;
+	font-size-adjust:0.5;	
+}
+
+.Page {
+	background-color: #003168;
+	
+}
+
+.Logo {
+	margin-left: auto;
+	height: 30px
+}
+
+/*----------------------------------------------Navigation--------------------------------------------*/
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+  }
+  
+  .container {
+    max-width: 100%;
+    width: 100%;
+    height: 100px;
+    margin: 0px;
+  }
+  
+  .navbar {
+    width: 100%;
+    /*box-shadow: 0 1px 4px #784d03;*/
+    
+    
+  }
+  
+  .nav-container {
+      justify-content: space-between;
+      align-items: center;
+      height: 30vh;
+      
+  }
+  
+  .navbar .menu-items {
+    display: inline-flex;
+    width:100%;
+  }
+  
+  .navbar .nav-container li {
+    list-style: none;
+  }
+  /*-----Menu text Items--------------------*/
+  .navbar .nav-container a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 3rem;
+    padding: 0.7rem;
+    font-family: arial;
+      transition: font-size .35s ease-out;
+  }
+  
+  .navbar .nav-container a:hover{
+      
+      
+      font-size: 4rem;
+    transition: font-size .4s ease-in-out;
+  }
+  
+  /*-----Size of flyout menu--------------------*/
+  
+  .nav-container {
+      display: block;
+      position: relative;
+      height: 89px;
+      /*background: rgb(2,3,28);
+background: linear-gradient(167deg, rgba(2,3,28,1) 0%, rgba(120,77,3,1) 100%);
+     */ 
+     
+  }
+  
+  .nav-container .checkbox {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: 34%;
+    left: 2%;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .nav-container .hamburger-lines {
+    display: block;
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 34%;
+    left: 2%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .nav-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+  }
+  
+  .nav-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+    
+  }
+  
+  .nav-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .nav-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .navbar .menu-items {
+      opacity: 1;
+      padding-top: 15vh;
+      color: white;
+      /* background: #B4975A; */
+      height: -10vh;
+      width: 40vw;
+      display: flex;
+      flex-direction: column;
+      
+      transition: margin-bottom 0.25s ease, opacity 0.3s ease-in; /* Changed transition to only affect opacity */
+      text-align: left;
+      margin-left: -200%;
+      position: fixed;
+      
+      
+  }
+  
+  .navbar .menu-items li {
+    margin-bottom: -10vh;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-left: 1vw;
+    transition: margin-bottom 1s ease;
+    
+  }
+
+  .navbar input[type="checkbox"]:checked ~ .menu-items li {
+  transform: translateX(0);
+  margin-bottom: 1vh;
+  }
+  
+  .logo2 {
+    position: absolute;
+    top:19%;
+    right: 15px;
+    font-size: 1.2rem;
+    color: white;
+    height: 40px;
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+    opacity: 1;
+      margin-left: 0px;
+      margin-bottom: 10vh;
+      transition: margin-bottom 0.7 ease, opacity 0.3s ease;
+  }
+
+  .nav-container input[type="checkbox"]:not(:checked) ~ .menu-items {
+    transform: translateX(0);
+    opacity: 0;
+    pointer-events: none;
+      margin-left: 0px;
+      margin-bottom: 40vh;
+      transition: margin-bottom 0.7 ease, opacity 0.3s ease;
+      
+
+  
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+      background-color: white;
+      
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+      background-color: white;
+      
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+      background-color: white;
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .logo{
+    display: none;
+  }
+
+  .main_content {
+    color: white;
+    margin-top: 15vh;
+    
+    
+  }
+
+    
+  
+  /* CSS Document */
+  
+  .Title1 {
+      
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: 30%;
+    left: 46%;
+    z-index: 5;
+    font-size: 1.8rem;
+    font-family: arial;
+    opacity: 1;
+    
+  }
+  
+/*--------------Testing Styles ----------------------------*/
+
+.main_heading {
+  color: white;
+  font-family: Arial;
+  font-size: 2rem;
+  margin-left: 16vw
+
+}
