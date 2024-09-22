@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website in progress...">
+    <meta name="keywords" content="remym, moscovitz, remymoscovitz, rmoscovitz">
+    <link rel="icon" href="rm_custom_icon.png" type="image/png">
+    <title>Projects</title>
+    <meta property="og:title" content="Remy Mosvitz" />
+    <meta property="og:description" content="Wesite in progress..." />
+    <meta property="og:image" content="rm_custom_icon.png" />
+    <meta property="og:url" content="remymoscovitz.com" />
+    <html lang="en">
+    <link href="hamburger.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload="fadeIn()">
+    <div class="top_fade"> <img src="white_nav_icon.png" class="top-right-logo"></div>
+    <div id="mySidenav" class="sidenav">
+        <a href="home.html">Home</a>
+        <a href="contact.html">LinkedIn</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">About</a>
+    </div>
+    <div style="position: fixed; z-index:3;">
+        <div class="name"></div>
+        <div class="hamburger hamburger--minus js-hamburger">
+            <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Look for .hamburger
+        var hamburger = document.querySelector(".hamburger");
+        var isOpen = false; // Track the state of the menu
+
+        // On click
+        hamburger.addEventListener("click", function () {
+            // Toggle class "is-active"
+            hamburger.classList.toggle("is-active");
+
+            // Check if the menu is currently open or closed
+            if (isOpen) {
+                closeNav();
+            } else {
+                openNav();
+            }
+
+            // Toggle the state
+            isOpen = !isOpen;
+        });
+
+        
+
+        function fadeIn() {
+            document.getElementById("main").style.opacity = "1";
+            document.getElementById("main").style.marginTop = "0px";
+
+        }
+
+        
+
+
+
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+    <div id="main">
+        <div id="fadeIn">
+        <div class="spacer"></div>
+        <h2>Projects</h2>
+        <p>Click on the element below to open the side navigation menu, and push this content to the right.</p>
+        <div class="project-items">
+
+            <div>
+                <h3>Hello, box 1</h3>
+
+            </div>
+
+            <div>
+                <h3>Hello, box 2</h3>
+            </div>
+
+            <div>
+                <h3>Hello, box 3</h3>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+
+</html>
