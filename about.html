@@ -17,7 +17,9 @@
 
 <body onload="fadeIn()">
   <div class="top_fade"> 
-    <img src="white_nav_icon.png" class="top-right-logo">
+    <a href="home.html">
+      <img src="white_nav_icon.png" class="top-right-logo" alt="Home">
+    </a>
   </div>
   <div id="mySidenav" class="sidenav">
     <a href="home.html">Home</a>
@@ -34,6 +36,11 @@
     </div>
   </div>
   <script>
+
+    function openHome()
+    {
+      window.open("home.html")
+    }
     // Look for .hamburger
     var hamburger = document.querySelector(".hamburger");
     var isOpen = false; // Track the state of the menu
