@@ -844,6 +844,18 @@
   z-index: 10; /* Ensure it appears above other content */
 }
 
+.home-image {
+
+  width: 200px;
+
+
+}
+
+.home-container {
+  display: inline-block;
+
+}
+
 
 
   /* 
