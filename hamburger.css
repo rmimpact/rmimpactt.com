@@ -810,15 +810,14 @@
     backdrop-filter: blur(9999px);  
     text-align: center;
     align-content: center; 
-    transition: 5.3s ease;
-    font-size: 100%;
+    transition: 0.3s ease;
+    font-size: 1rem;
     
 }
 
 .project-items > div:hover {
   padding: 40px;
-  font-size: 110%;
-  transition: 0.3s ease;
+  font-size: 1.7rem;
 }
 
 
