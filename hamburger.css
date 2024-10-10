@@ -812,12 +812,14 @@
     align-content: center; 
     transition: 0.3s ease;
     font-size: 1rem;
+    background-image: url();
     
 }
 
 .project-items > div:hover {
   padding: 40px;
   font-size: 1.7rem;
+  
 }
 
 
@@ -880,3 +882,5 @@
     
   }
     */
+
+    
