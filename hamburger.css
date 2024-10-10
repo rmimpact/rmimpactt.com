@@ -794,6 +794,7 @@
     display: flex; /* You can keep this for larger screens */
     flex-wrap: wrap; /* Allow items to wrap to the next line */
     gap: 10px; /* Space between items */
+    
 }
 
 .project-items > div {
@@ -806,8 +807,21 @@
     border: 1px solid rgba(211, 211, 211, 0.089);
     box-shadow: 4px 4px 5px #25160008;
     border-radius: 10px;
-    backdrop-filter: blur(9999px);     
+    backdrop-filter: blur(9999px);  
+    text-align: center;
+    align-content: center; 
+    transition: 5.3s ease;
+    font-size: 100%;
+    
 }
+
+.project-items > div:hover {
+  padding: 40px;
+  font-size: 110%;
+  transition: 0.3s ease;
+}
+
+
 
 /* Media query for smaller screens */
 @media (max-width: 600px) {
