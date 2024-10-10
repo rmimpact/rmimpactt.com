@@ -791,36 +791,56 @@
   /*--------------------------- Flex Box -------------------*/
 
   .project-items {
-    display: flex; /* You can keep this for larger screens */
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    gap: 10px; /* Space between items */
-    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .project-items > div {
-    z-index: 0;
+    position: relative; /* Make the div a positioning context */
+    z-index: 1;
     padding: 10px;
-    width: 270px; /* You can keep this fixed width or adjust it */
+    width: 270px;
     background-color: rgba(211, 211, 211, 0.127);
     height: 100px;
-    color: lightgrey;
+    color: rgb(211, 211, 211);
     border: 1px solid rgba(211, 211, 211, 0.089);
     box-shadow: 4px 4px 5px #25160008;
     border-radius: 10px;
-    backdrop-filter: blur(9999px);  
+    backdrop-filter: blur(9999px);
     text-align: center;
-    align-content: center; 
+    align-content: center;
     transition: 0.3s ease;
     font-size: 1rem;
-    background-image: url();
-    
+}
+
+.project-items > div::before {
+    content: "";
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2; /* Set your desired opacity */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Ensure the background stays behind the text */
+    border-radius: 10px; /* Match the border radius of the parent div */
 }
 
 .project-items > div:hover {
-  padding: 40px;
-  font-size: 1.7rem;
-  
+    padding: 40px;
+    font-size: 1.7rem;
 }
+
+/* Unique background for Elite Dangerous */
+.elite-dangerous::before {
+    background-image: url('https://rmimpactt.com/Elitedangerousbackground.png');
+}
+
+/* You can add more classes for other divs with different backgrounds */
+
+
 
 
 
