@@ -831,13 +831,17 @@
 .project-items > div:hover {
     padding: 40px;
     font-size: 1.7rem;
+    cursor: pointer;
 }
 
 /* Unique background for Elite Dangerous */
 .elite-dangerous::before {
-    background-image: url('https://rmimpactt.com/Elitedangerousbackground.png');
+    background-image: url('Elitedangerousbackground.png');
 }
 
+.fortnite::before {
+  background-image: 
+}
 /* You can add more classes for other divs with different backgrounds */
 
 
