@@ -78,12 +78,33 @@
       <div class="spacer"></div>
       <h2 style="font-size: 2rem;">Games</h2>
       <p style="font-size: 1 rem;">
-      <iframe src="https://tracker.gg/valorant/profile/riot/I%20like%20SpaceX%23impac/overview" width="100%" height="1000" frameborder="0"></iframe>
-
-      
+      <!--<iframe src="https://tracker.gg/valorant/profile/riot/I%20like%20SpaceX%23impac/overview" width="100%" height="1000" frameborder="0"></iframe>
+      -->  
       </p>
       
-      
+      <body>
+        <h1>My Valorant Profile</h1>
+        <div id="stats"></div>
+    
+        <script>
+            async function fetchValorantStats() {
+                const response = await fetch('https://public-api.tracker.gg/v2/valorant/standard/profile/riot/I%20like%20SpaceX%23impac', {
+                    headers: {
+                        'TRN-Api-Key': 'd99fa836-e37e-427a-b9f0-c92fc1a1f103'
+                    }
+                });
+    
+                const data = await response.json();
+                document.getElementById('stats').innerHTML = `
+                    <p>Rank: ${data.data.segments[0].stats.rank.displayValue}</p>
+                    <p>Win Rate: ${data.data.segments[0].stats.winRate.displayValue}</p>
+                    <!-- Add other stats as needed -->
+                `;
+            }
+    
+            fetchValorantStats();
+        </script>
+    </body>
     
     </div>
     </div>
