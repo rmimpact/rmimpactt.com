@@ -2,7 +2,7 @@
   "name": "rmimpactt.com",
   "version": "1.0.0",
   "description": "hello",
-  "main": "script.js",
+  "main": "server.js",  // Updated to match your server entry file
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
