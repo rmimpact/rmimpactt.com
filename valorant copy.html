@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Valorant Rank</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorant API Data</title>
 </head>
 <body>
-  <h1>My Valorant Rank</h1>
-  <div id="rank"></div>
+    <h1>Valorant Rank Data</h1>
+    <div id="rank"></div>
 
-  <script src="script.js"></script>
+    <script>
+        // Fetch the rank data from your backend
+        fetch('http://localhost:3000/api/valorant')
+            .then(response => response.json())
+            .then(data => {
+                // Grab the rank data from the response
+                const rank = data.data.current_data.currenttierpatched;
+                
+                // Display it on the page
+                document.getElementById('rank').innerText = `Current Rank: ${rank}`;
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+                document.getElementById('rank').innerText = 'Failed to fetch rank data';
+            });
+    </script>
 </body>
 </html>
